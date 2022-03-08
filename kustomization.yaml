@@ -2,6 +2,7 @@ namespace: argocd
 resources:
   - namespace.yml
   - letsencrypt-keycloak-issuer.yml
+  - sql-proxy.deployment.yml
   - keycloak.deployment.yml
   - keycloak.service.yml
   - ingress.yml
