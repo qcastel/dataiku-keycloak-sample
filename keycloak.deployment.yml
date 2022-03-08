@@ -37,7 +37,7 @@ spec:
         - name: keycloak
           image: quay.io/keycloak/keycloak:latest
           imagePullPolicy: Always
-          args: ["start"]
+          args: ["start", "–hostname-strict=false"]
           ports:
             - name: http-server
               containerPort: 8080
