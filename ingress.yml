@@ -17,5 +17,5 @@ spec:
       http:
         paths:
           - backend:
-              serviceName: keycloak-test
+              serviceName: keycloak
               servicePort: 8080
