@@ -35,7 +35,7 @@ spec:
                  "-credential_file=/secrets/cloudsql/credentials.json",
                  "-term_timeout=10s"]
         - name: keycloak
-          image: quay.io/keycloak/keycloak:latest
+          image: quay.io/keycloak/keycloak:16.1.1
           imagePullPolicy: Always
           args: ["start", "--hostname=keycloak.dataiku.idhub.io", "--proxy=edge", "--hostname-strict-https=false"]
           ports:
