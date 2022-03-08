@@ -3,6 +3,7 @@ resources:
   - namespace.yml
   - letsencrypt-keycloak-issuer.yml
   - keycloak.deployment.yml
+  - keycloak.service.yml
   - ingress.yml
 
 generators:
