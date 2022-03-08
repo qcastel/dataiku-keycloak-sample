@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  namespace: keycloak
+  name: keycloak-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-keycloak"
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+    - hosts:
+        - keycloak.dataiku.idhub.io
+      secretName: letsencrypt-keycloak
+
+  rules:
+    - host: keycloak.dataiku.idhub.io
+      http:
+        paths:
+          - backend:
+              serviceName: keycloak
+              servicePort: 80
