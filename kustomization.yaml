@@ -1,8 +1,8 @@
 namespace: argocd
 resources:
-  - namespace.yaml
+  - namespace.yml
   - keycloak.deployment.yml
   - keycloak.service.yml
 
 generators:
-  - secret-generator.yaml
+  - secret-generator.yml
