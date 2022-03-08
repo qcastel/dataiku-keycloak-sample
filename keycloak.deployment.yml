@@ -37,7 +37,7 @@ spec:
         - name: keycloak
           image: quay.io/keycloak/keycloak:latest
           imagePullPolicy: Always
-          args: ["start", "--hostname=keycloak.dataiku.idhub.io"]
+          args: ["start", "--hostname=keycloak.dataiku.idhub.io", "--proxy=edge", "--hostname-strict-https=false"]
           ports:
             - name: http-server
               containerPort: 8080
