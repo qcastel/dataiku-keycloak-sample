@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sql-proxy
+  namespace: keycloak
+  labels:
+    app: sql-proxy
+spec:
+  selector:
+    matchLabels:
+      app: sql-proxy
+  template:
+    metadata:
+      labels:
+        app: sql-proxy
+    spec:
+      containers:
+        - name: cloudsql-proxy
+          image: gcr.io/cloudsql-docker/gce-proxy:1.17
+          ports:
+            - name: http-server
+              containerPort: 5432
+          volumeMounts:
+            - name: db-credentials
+              mountPath: /secrets/cloudsql
+              readOnly: true
+          env:
+            - name: GCLOUD_PROJECT_ID
+              value: dataiku-dev
+            - name: DATABASE_ID
+              value: keycloak
+          command: ["/cloud_sql_proxy"]
+          args: ["-instances=$(GCLOUD_PROJECT_ID):europe-west2:$(DATABASE_ID)=tcp:0.0.0.0:5432",
+                 "-credential_file=/secrets/cloudsql/credentials.json",
+                 "-term_timeout=10s"]
+      volumes:
+        - name: db-credentials
+          secret:
+            secretName: db-credentials
+            items:
+              - key: sqlproxy-service-account
+                path: credentials.json
