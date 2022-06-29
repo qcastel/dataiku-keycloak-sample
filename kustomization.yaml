@@ -1,10 +1,15 @@
-namespace: argocd
+namespace: keycloak
 resources:
   - namespace.yml
+  - letsencrypt-staging-issuer.yml
   - letsencrypt-keycloak-issuer.yml
   - keycloak.deployment.yml
   - keycloak.service.yml
   - ingress.yml
+  - hello-world.deployment.yml
+  - hello-world.ingress.yml
+  - hello-world.service.yml
+  
 
 generators:
   - secret-generator.yml
