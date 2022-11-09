@@ -16,7 +16,7 @@ spec:
         app: hello-world
     spec:
       nodeSelector:
-        pool-name: service
+        pool-name: default-pool
       containers:
         - name: hello-world
           image: vad1mo/hello-world-rest
