@@ -16,7 +16,8 @@ spec:
     - host: hello-world.platform.dkucloud-dev.com
       http:
         paths:
-          - backend:
+          - pathType: ImplementationSpecific 
+            backend:
               name: hello-world
               port:
                 number: 5050

@@ -16,7 +16,8 @@ spec:
     - host: keycloak.platform.dkucloud-dev.com
       http:
         paths:
-          - backend:
+          - pathType: ImplementationSpecific 
+            backend:
               name: keycloak
               port:
                 number: 8080
