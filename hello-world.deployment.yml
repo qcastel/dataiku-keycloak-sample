@@ -15,8 +15,6 @@ spec:
       labels:
         app: hello-world
     spec:
-      nodeSelector:
-        pool-name: default-pool
       containers:
         - name: hello-world
           image: vad1mo/hello-world-rest

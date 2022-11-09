@@ -15,8 +15,6 @@ spec:
       labels:
         app: keycloak
     spec:
-      nodeSelector:
-        pool-name: default-pool
       containers:
         - name: cloudsql-proxy
           image: gcr.io/cloudsql-docker/gce-proxy:1.17
