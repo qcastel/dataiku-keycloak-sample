@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fm-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-keycloak"
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+    - hosts:
+        - fm.gcp.platform.dkucloud-dev.com
+      secretName: fm-gcp-cert
+
+  rules:
+    - host: fm.gcp.platform.dkucloud-dev.com
+      http:
+        paths:
+          - pathType: ImplementationSpecific 
+            backend:
+              service:
+                name: fm-gcp
+                port:
+                  number: 443
+              
