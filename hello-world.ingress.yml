@@ -18,7 +18,8 @@ spec:
         paths:
           - pathType: ImplementationSpecific 
             backend:
-              name: hello-world
-              port:
-                number: 5050
+              service:
+                name: hello-world
+                port:
+                  number: 5050
               

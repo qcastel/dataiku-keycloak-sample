@@ -18,7 +18,8 @@ spec:
         paths:
           - pathType: ImplementationSpecific 
             backend:
-              name: keycloak
-              port:
-                number: 8080
+              service:
+                name: keycloak
+                port:
+                  number: 8080
               
