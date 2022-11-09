@@ -5,5 +5,7 @@ metadata:
   labels:
     app: fm-gcp
 spec:
-  type: ExternalName
-  externalName: fm.gcp.internal.platform.dkucloud-dev.com
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 443

@@ -11,6 +11,7 @@ resources:
   - hello-world.service.yml
   - fm.ingress.yml
   - fm.service.yml
+  - fm.endpointslice.yml
 
 generators:
   - secret-generator.yml
