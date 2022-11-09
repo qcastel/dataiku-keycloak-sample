@@ -9,7 +9,8 @@ resources:
   - hello-world.deployment.yml
   - hello-world.ingress.yml
   - hello-world.service.yml
-  
+  - fm.ingress.yml
+  - fm.service.yml
 
 generators:
   - secret-generator.yml
