@@ -9,11 +9,11 @@ metadata:
 spec:
   tls:
     - hosts:
-        - keycloak.dataiku.idhub.io
+        - keycloak.platform.dkucloud-dev.com
       secretName: letsencrypt-keycloak
 
   rules:
-    - host: keycloak.dataiku.idhub.io
+    - host: keycloak.platform.dkucloud-dev.com
       http:
         paths:
           - backend:

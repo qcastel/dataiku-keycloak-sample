@@ -9,11 +9,11 @@ metadata:
 spec:
   tls:
     - hosts:
-        - hello-world.dataiku.idhub.io
+        - hello-world.platform.dkucloud-dev.com
       secretName: hello-world-cert
 
   rules:
-    - host: hello-world.dataiku.idhub.io
+    - host: hello-world.platform.dkucloud-dev.com
       http:
         paths:
           - backend:
