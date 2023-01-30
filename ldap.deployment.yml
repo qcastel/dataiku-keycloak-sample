@@ -30,7 +30,7 @@ spec:
             - name: BITNAMI_DEBUG
               value: "true"
             - name: LDAP_LOGLEVEL
-              value: 4
+              value: "4"
             - name: LDAP_ADMIN_PASSWORD
               valueFrom:
                 secretKeyRef:
