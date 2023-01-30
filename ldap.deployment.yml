@@ -19,17 +19,18 @@ spec:
           image: docker.io/bitnami/openldap:latest
           imagePullPolicy: "Always"
           env:
+            - name: LDAP_ROOT
+              value: platform.dkucloud-dev.com
             - name: LDAP_ADMIN_USERNAME
               value: "admin"
+            - name: LDAP_CUSTOM_SCHEMA_FILE
+              value: /ldap-config/user.schema
+            - name: LDAP_CUSTOM_LDIF_DIR
+              value: /ldap-config/
             - name: LDAP_ADMIN_PASSWORD
               valueFrom:
                 secretKeyRef:
                   key: adminpassword
-                  name: openldap
-            - name: LDAP_USERS
-              valueFrom:
-                secretKeyRef:
-                  key: users
                   name: openldap
             - name: LDAP_PASSWORDS
               valueFrom:
@@ -39,3 +40,12 @@ spec:
           ports:
             - name: tcp-ldap
               containerPort: 1389
+            - name: tls-ldap
+              containerPort: 1636
+          volumeMounts:
+            - mountPath: /ldap-config/
+              name: ldap-config
+      volumes:
+        - name: ldap-config
+          configMap:
+            name: ldap-configmap

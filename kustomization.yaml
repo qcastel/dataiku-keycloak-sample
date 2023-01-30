@@ -15,3 +15,11 @@ resources:
 
 generators:
   - secret-generator.yml
+
+generatorOptions:
+  disableNameSuffixHash: true
+configMapGenerator:
+- files:
+  - user.schema
+  - ldap-dss.ldif
+  name: ldap-configmap
