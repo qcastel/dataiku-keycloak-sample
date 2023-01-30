@@ -8,23 +8,19 @@ objectClass: organizationalUnit
 
 dn: cn=alice,ou=People,dc=platform,dc=dkucloud-dev,dc=com
 uid: alice
-myadditionnalAttr2: Value2
-myadditionnalAttr: Value1
 sn: Alice
 mail: alice@dataiku.com
 userPassword:: e1NTSEF9NXYrS3JDRVBiVWFZa1pQVEVlbDRvT3crMmo0cFh6NTE=
 cn: alice
-objectClass: personnel
+objectClass: person
 
 dn: cn=bob,ou=People,dc=platform,dc=dkucloud-dev,dc=com
 uid: bob
-myadditionnalAttr2: Value2
-myadditionnalAttr: Value1
 sn: Bob
 mail: bob@dataiku.com
 userPassword:: e1NTSEF9NXYrS3JDRVBiVWFZa1pQVEVlbDRvT3crMmo0cFh6NTE=
 cn: bob
-objectClass: personnel
+objectClass: person
 
 dn: cn=administrators,ou=Groups,dc=platform,dc=dkucloud-dev,dc=com
 objectClass: top
