@@ -32,11 +32,6 @@ spec:
                 secretKeyRef:
                   key: adminpassword
                   name: openldap
-            - name: LDAP_PASSWORDS
-              valueFrom:
-                secretKeyRef:
-                  key: passwords
-                  name: openldap
           ports:
             - name: tcp-ldap
               containerPort: 1389
