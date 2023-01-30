@@ -20,7 +20,7 @@ spec:
           imagePullPolicy: "Always"
           env:
             - name: LDAP_ROOT
-              value: platform.dkucloud-dev.com
+              value: dc=platform,dc=dkucloud-dev,dc=com
             - name: LDAP_ADMIN_USERNAME
               value: "admin"
             - name: LDAP_CUSTOM_SCHEMA_FILE
