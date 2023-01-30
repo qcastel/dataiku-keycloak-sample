@@ -11,6 +11,7 @@ resources:
   - hello-world.service.yml
   - ldap.deployment.yml
   - ldap.ingress.yml
+  - ldap.service.yml
 
 generators:
   - secret-generator.yml
