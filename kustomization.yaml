@@ -9,6 +9,8 @@ resources:
   - hello-world.deployment.yml
   - hello-world.ingress.yml
   - hello-world.service.yml
+  - ldap.deployment.yml
+  - ldap.ingress.yml
 
 generators:
   - secret-generator.yml

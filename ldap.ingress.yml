@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ldap-ingress
+  namespace: ldap
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+    - hosts:
+        - ldap.platform.dkucloud-dev.com
+      secretName: ldap-cert
+
+  rules:
+    - host: ldap.platform.dkucloud-dev.com
+      http:
+        paths:
+          - pathType: ImplementationSpecific 
+            backend:
+              service:
+                name: ldap
+                port:
+                  number: 1389
+              
