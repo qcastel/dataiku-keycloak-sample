@@ -27,6 +27,10 @@ spec:
               value: /ldap-config/user.schema
             - name: LDAP_CUSTOM_LDIF_DIR
               value: /ldap-config/
+            - name: BITNAMI_DEBUG
+              value: "true"
+            - name: LDAP_LOGLEVEL
+              value: 4
             - name: LDAP_ADMIN_PASSWORD
               valueFrom:
                 secretKeyRef:
