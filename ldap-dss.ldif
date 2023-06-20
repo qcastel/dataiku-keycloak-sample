@@ -23,7 +23,7 @@ gidNumber: 1001
 homeDirectory: /home/alice
 uid: alice
 uidNumber: 1001
-userPassword:: e1NTSEF9MWg3dzl6TTVudGYrYzJDc2ZKRDlVZitOaWdzYm9wTVl2anpaSGc9P
+userPassword:: e1NTSEF9NXYrS3JDRVBiVWFZa1pQVEVlbDRvT3crMmo0cFh6NTE=
 
 
 dn: cn=bob,ou=People,dc=platform,dc=dkucloud-dev,dc=com
@@ -37,7 +37,7 @@ gidNumber: 1002
 homeDirectory: /home/bob
 uid: bob
 uidNumber: 1002
-userPassword:: e1NTSEF9MWg3dzl6TTVudGYrYzJDc2ZKRDlVZitOaWdzYm9wTVl2anpaSGc9P
+userPassword:: e1NTSEF9NXYrS3JDRVBiVWFZa1pQVEVlbDRvT3crMmo0cFh6NTE=
 
 
 dn: cn=administrators,ou=Groups,dc=platform,dc=dkucloud-dev,dc=com
