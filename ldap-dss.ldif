@@ -40,6 +40,19 @@ uidNumber: 1002
 userPassword:: e1NTSEF9NXYrS3JDRVBiVWFZa1pQVEVlbDRvT3crMmo0cFh6NTE=
 
 
+dn: cn=charlie,ou=People,dc=platform,dc=dkucloud-dev,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: charlie
+sn: Charlie
+mail: charlie@dataiku.com
+gidNumber: 1003
+homeDirectory: /home/charlie
+uid: Charlie
+uidNumber: 1003
+userPassword:: e1NTSEF9NXYrS3JDRVBiVWFZa1pQVEVlbDRvT3crMmo0cFh6NTE=
+
 dn: cn=administrators,ou=Groups,dc=platform,dc=dkucloud-dev,dc=com
 objectClass: top
 objectClass: groupofnames
@@ -50,6 +63,12 @@ dn: cn=readers,ou=Groups,dc=platform,dc=dkucloud-dev,dc=com
 objectClass: top
 objectClass: groupofnames
 member: cn=bob
+member: cn=alice
 cn: readers
 
+dn: cn=villain,ou=Groups,dc=platform,dc=dkucloud-dev,dc=com
+objectClass: top
+objectClass: groupofnames
+member: cn=charlie
+cn: villain
 
