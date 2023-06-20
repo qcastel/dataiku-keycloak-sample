@@ -37,6 +37,9 @@ spec:
               containerPort: 1389
             - name: tls-ldap
               containerPort: 1636
+          volumeMounts:
+            - mountPath: /ldap-config/
+              name: ldap-config
       volumes:
         - name: ldap-config
           configMap:
