@@ -43,13 +43,13 @@ userPassword:: e1NTSEF9NXYrS3JDRVBiVWFZa1pQVEVlbDRvT3crMmo0cFh6NTE=
 dn: cn=administrators,ou=Groups,dc=platform,dc=dkucloud-dev,dc=com
 objectClass: top
 objectClass: groupofnames
-member: alice
+member: cn=alice
 cn: administrators
 
 dn: cn=readers,ou=Groups,dc=platform,dc=dkucloud-dev,dc=com
 objectClass: top
 objectClass: groupofnames
-member: bob
+member: cn=bob
 cn: readers
 
 
