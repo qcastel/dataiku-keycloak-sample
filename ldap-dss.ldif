@@ -1,10 +1,16 @@
+dn: dc=platform,dc=dkucloud-dev,dc=com
+objectClass: dcObject
+objectClass: organization
+dc: platform
+o: Dataiku
+
 dn: ou=People,dc=platform,dc=dkucloud-dev,dc=com
-ou: People
 objectClass: organizationalUnit
+ou: People
 
 dn: ou=Groups,dc=platform,dc=dkucloud-dev,dc=com
-ou: Groups
 objectClass: organizationalUnit
+ou: Groups
 
 dn: cn=alice,ou=People,dc=platform,dc=dkucloud-dev,dc=com
 objectClass: inetOrgPerson
