@@ -12,7 +12,8 @@ sn: Alice
 mail: alice@dataiku.com
 userPassword:: e1NTSEF9NXYrS3JDRVBiVWFZa1pQVEVlbDRvT3crMmo0cFh6NTE=
 cn: alice
-objectClass: person
+objectClass: inetOrgPerson
+objectClass: posixAccount
 
 dn: cn=bob,ou=People,dc=platform,dc=dkucloud-dev,dc=com
 uid: bob
@@ -20,7 +21,8 @@ sn: Bob
 mail: bob@dataiku.com
 userPassword:: e1NTSEF9NXYrS3JDRVBiVWFZa1pQVEVlbDRvT3crMmo0cFh6NTE=
 cn: bob
-objectClass: person
+objectClass: inetOrgPerson
+objectClass: posixAccount
 
 dn: cn=administrators,ou=Groups,dc=platform,dc=dkucloud-dev,dc=com
 objectClass: top
