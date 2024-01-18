@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: keycloak-ssl-fail-ingress
+  namespace: keycloak
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+    - host: keycloak-ssl-fail.platform.dkucloud-dev.com
+      http:
+        paths:
+          - pathType: ImplementationSpecific 
+            backend:
+              service:
+                name: keycloak
+                port:
+                  number: 8080
+              
