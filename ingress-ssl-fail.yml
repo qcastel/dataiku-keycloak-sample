@@ -10,7 +10,7 @@ spec:
   tls:
     - hosts:
         - keycloak-ssl-fail.platform.dkucloud-dev.com
-      secretName: letsencrypt-keycloak-ssl-fail
+      secretName: letsencrypt-staging
 
   rules:
     - host: keycloak-ssl-fail.platform.dkucloud-dev.com
