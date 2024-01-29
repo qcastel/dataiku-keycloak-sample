@@ -13,7 +13,6 @@ resources:
   - ldap.ingress.yml
   - ldap.service.yml
   - ingress-ssl-fail.yml
-  - ingress-ssl-fail2.yml
 
 generators:
   - secret-generator.yml

@@ -10,6 +10,7 @@ spec:
   tls:
     - hosts:
         - keycloak-ssl-fail.platform.dkucloud-dev.com
+        - keycloak-ssl-fail2.platform.dkucloud-dev.com
       secretName: letsencrypt-staging
 
   rules:
@@ -22,4 +23,12 @@ spec:
                 name: keycloak
                 port:
                   number: 8080
-              
+    - host: keycloak-ssl-fail2.platform.dkucloud-dev.com
+      http:
+        paths:
+          - pathType: ImplementationSpecific 
+            backend:
+              service:
+                name: keycloak
+                port:
+                  number: 8080              
