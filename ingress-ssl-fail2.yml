@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: keycloak-ssl-fail2-ingress
+  namespace: keycloak
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+    - hosts:
+        - keycloak-ssl-fail2.platform.dkucloud-dev.com
+      secretName: letsencrypt-staging
+
+  rules:
+    - host: keycloak-ssl-fail2.platform.dkucloud-dev.com
+      http:
+        paths:
+          - pathType: ImplementationSpecific 
+            backend:
+              service:
+                name: keycloak
+                port:
+                  number: 8080
+              
